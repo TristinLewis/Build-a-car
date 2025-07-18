@@ -18,12 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleUi.h" />
+    <ClInclude Include="Die.h" />
+    <ClInclude Include="GameLogic.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConsoleUi.cpp" />
+    <ClCompile Include="Die.cpp" />
+    <ClCompile Include="GameLogic.cpp" />
+    <ClCompile Include="Yahtzee.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{f6187248-ade1-40da-9498-a8000936b03f}</ProjectGuid>
     <RootNamespace>Buildacar</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Yahtzee</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -126,9 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="BuildACar.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
