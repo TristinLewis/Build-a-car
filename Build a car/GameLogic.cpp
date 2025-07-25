@@ -2,12 +2,12 @@
 #include "ConsoleUi.h"
 #include <iostream> 
 #include <string> 
-
+#include <vector> 
 
 using namespace std; 
 
 
-GameLogic::GameLogic() : roll(0), round(0), total(0), categoryScores(6,0), categoryUsed(6,false),
+GameLogic::GameLogic() : roll(0), round(0), score(0), categoryScores(6,0), categoryUsed(6,false),
 dice(5), rerollDice(5,false){
 	for (int i = 0; i < 5; i++) {
 		dice[i].roll(); 
@@ -64,7 +64,6 @@ vector<int> GameLogic::getDiceFaceValues() const {
 	return values; 
 }
 
-
 // misc
 void GameLogic::rollAll() {
 	for (int i = 0; i < dice.size(); i++) {
@@ -96,5 +95,15 @@ bool GameLogic::allCategoriesUsed()  {
 		}
 	}
 	return true; 
+}
+int GameLogic::calculateScore(const vector<int>& diceValues, int category) const {
+	int targetNumber, score = 0; 
+	targetNumber = category + 1; 
+	for (int value : diceValues) {
+		if (value == targetNumber) {
+			score += value; 
+		}
+	}
+	return score; 
 }
 

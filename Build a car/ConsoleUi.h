@@ -22,6 +22,7 @@ public:
 	
 	int chooseScore(const vector<int>& scoresUsed)const; 
 
+	vector<bool> getRerollDice(); 
 };
 
 

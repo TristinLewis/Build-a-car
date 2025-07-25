@@ -3,6 +3,7 @@
 #include "Die.h"
 #include <iostream> 
 #include <vector> 
+
 using namespace std; 
 
 class GameLogic {
@@ -10,7 +11,7 @@ private:
     int roll, round, score;
     vector<Die> dice;
     vector<int> categoryScores;
-    vector<int>categoryUsed;
+    vector<bool>categoryUsed;
     vector<bool> rerollDice; 
 
 public:
@@ -32,13 +33,13 @@ public:
 
     vector<int> getCategoryStorage()const;
     vector<int> getDiceFaceValues() const;
- 
+
 
     // misc
     void rollAll();
     void reroll();
     void updateScore(); 
-
+    int calculateScore(const vector<int>& diceValues, int category) const;
 
     bool allCategoriesUsed(); 
 
