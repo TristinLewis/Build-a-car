@@ -1,9 +1,4 @@
-Yahtzee Game
-
-
-Not Finished
-
-
+Yahtzee
 
  Roll five dice
 - Choose which dice to reroll
